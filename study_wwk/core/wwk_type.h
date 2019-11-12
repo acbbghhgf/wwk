@@ -65,8 +65,8 @@ extern "C" {
 
 #ifdef __ANDROID__
 #include <android/log.h>
-#define wwk_debug(...) __android_log_print(ANDROID_LOG_DEBUG,"wwk",__VA_ARGS__);
-//#define wwk_debug(...) printf("%s:%d:",__FUNCTION__,__LINE__);printf(__VA_ARGS__);fflush(stdout);
+//#define wwk_debug(...) __android_log_print(ANDROID_LOG_DEBUG,"wwk",__VA_ARGS__);
+#define wwk_debug(...) printf("%s:%d:",__FUNCTION__,__LINE__);printf(__VA_ARGS__);fflush(stdout);
 #else
 #ifdef xunix
 #include <sys/types.h>
