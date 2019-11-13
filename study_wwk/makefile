@@ -14,7 +14,7 @@ CC=gcc
 CFLAGS=-Wall -Werror -g -O3
 LDFLAGS=
 TEST_LD=-I . -L . -lwwk
-CFLAGS+= -D USE_TCP_NODELAY -D USE_TCP_QUICKACK -DUSE_SQL
+CFLAGS+= ${TEST_LD} -D USE_TCP_NODELAY -D USE_TCP_QUICKACK -DUSE_SQL
 
 all: $(target)
 	echo $(target)
